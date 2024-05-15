@@ -1,10 +1,12 @@
-console.log(typeof null) // language error
+console.log(typeof null) // language shortcoming
 console.log(typeof undefined)
 
 let age = 23
 let islogged = true
-let name = "123"
+let Aname = "123"
 
-console.log(typeof name)
+console.log(typeof age);
+console.log(typeof Aname);
+console.log(typeof islogged);
 
 // symbol => unique

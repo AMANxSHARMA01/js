@@ -2,7 +2,8 @@
 // Object.create (iske andar singleton bnta hai , constructor method ke through)
 
 // ______________________object literals____________________
-const symbol1 = Symbol("key1")
+const symbol1 =  Symbol("key1")
+console.log(symbol1);
 const jsUser = {
      
      [symbol1] : "a", // [] when refering symbol

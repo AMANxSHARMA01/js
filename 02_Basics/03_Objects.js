@@ -46,10 +46,30 @@ const users = [{
     id : 5,
     name:"nini"
 }]
-
+/*
 console.log(users[0].name)// . to access object [] to array element
 console.log(Object.entries(User)) // hr ek value ko array 
-console.log(Object.values(regularUser)) // return is an array (useful)
+console.log(Object.values(regularUser)) // return is an array (usefull)
 console.log(regularUser.hasOwnProperty('fullname')) // to check wheather hai ya nhi key
+*/
 
+// Destructuring of Object //
 
+const course = {
+    coursename : "js",
+    price : "44",
+    instructor : "aman"
+}
+
+// course.instructor
+
+const {instructor: masterJi} = course // const {kya value} = kahan se
+// console.log(masterJi); // object destructure
+
+// JSON OBJECt hi hai but naaam nhi hai{keys bhi string values bhi string}
+// {
+//     "coursename" : "js",
+//     "price" : "44",
+//     "instructor" : "aman"
+// }  array ki format mai bhi milti hai
+// zaruri nhi ki object ki form mai mile JavaScript Object Notation array bhi mil sakta hai

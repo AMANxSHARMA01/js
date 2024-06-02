@@ -25,5 +25,14 @@ function one(){
 
 one()
 
-// *****************************************************************
+// ***************************HOISTING**************************************
 
+function addOne(num){
+    return num + 1
+}
+console.log(addOne(5));
+
+const addTwo = function(num){    // variables are powerfull in js
+    return num +2
+}
+console.log(addTwo(9)); // this method initializes variable and store in it hence cant be executed before function declaration

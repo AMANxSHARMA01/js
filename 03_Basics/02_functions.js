@@ -31,7 +31,7 @@ function addOne(num){
     return num + 1
 }
 console.log(addOne(5));
-
+    
 const addTwo = function(num){    // variables are powerfull in js
     return num +2
 }

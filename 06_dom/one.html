@@ -2,22 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    
-    <title>DOM LEARNING</title>
-    <style>
-        
-            .bg-black{
-                        background-color: #212121;
-                        color: beige;
-            }
-        
-    </style>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code </title>
 </head>
-<body class="bg-black">
-    <div >
-        <h1 id= "title" class="heading">dom learning</h1>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa maiores tempora illo</p>
-    </div>
+<body style="background-color: #212121; color: #fff;">
     
 </body>
+<script>
+    const div = document.createElement('div')
+    console.log(div);
+    div.className = "main"
+    div.id = Math.round(Math.random() * 10 + 1)
+    div.setAttribute("title", "generated title")
+    div.style.backgroundColor = "green"
+    div.style.padding = "12px"
+    // div.innerText = "Chai aur code"
+    const addText = document.createTextNode("lorem ipsem")
+    div.appendChild(addText)
+
+    document.body.appendChild(div)
+
+</script>
 </html>

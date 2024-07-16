@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ASYNC JS</h1>
+    <button id = "stop">STOP</button>
+    <button id = "start">START</button>
+    <script>
+        let intervalId;
+        const StartChangingText = function () {
+            intervalId = setInterval(changeh1,2000)
+            function changeh1(){
+                console.log("Hi");
+                document.querySelector('h1').
+                innerHTML = "We have started the interval"
+            }
+        }
+
+        const StopChangingText = function () {
+            console.log("Bye");
+            document.querySelector('h1').
+            innerHTML = "We have stopped the interval"
+            clearInterval(intervalId)
+        }
+
+        document.querySelector('#stop').
+        addEventListener("click", StopChangingText)
+
+        document.querySelector('#start').
+        addEventListener("click", StartChangingText)
+    </script>
+</body>
+</html>

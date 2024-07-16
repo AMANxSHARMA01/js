@@ -9,6 +9,20 @@
     <h1>
         Hi, My Name is Aman Sharma !
     </h1>
-    
+    <button id = "stop">STOP</button>
+    <script>
+        const changeText = function () {    
+            console.log("hi");                // only one time executes , no breakpoint {setTimeout}
+            document.querySelector('h1').
+            innerHTML = " Jai baba balak nath"
+        }
+        let clearMe = setInterval(changeText, 4000)
+        
+        document.querySelector('#stop').
+        addEventListener('click', function(){
+            clearInterval(clearMe)
+            console.log("Stopped");
+        })
+    </script>
 </body>
 </html>

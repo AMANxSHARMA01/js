@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .card {
+        /* Add shadows to create the "card" effect */
+        width: 304px;
+        height: 228;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        margin: auto;
+        width: 60%;
+        border: 3px solid #72126a;
+        padding: 10px;
+      }
+    .container {
+        padding: 2px 16px;
+      }
+    #myImg {
+        display: block;  
+        margin-left: auto;  
+        margin-right: auto;  
+        width: 60%;
+    }
+      </style>
+<body style="background-color: #7474;">
+    <div id="press"><button type="button">Click Me!</button></div>
+    <div class="card">
+        <img id="myImg" src="img_pulpit.jpg" alt="avatar">
+        <div class="container">
+          <h4><b>John Doe</b></h4>
+          <p>Architect & Engineer</p>
+        </div>
+      </div> 
+
+    <script>
+            document.getElementById("press").addEventListener("click", getIt);
+
+    function getIt() { 
+    
+        const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', requestUrl)
+        xhr.onreadystatechange = function () {
+            console.log(xhr.readyState);
+            if (xhr.readyState === 4){
+                const data = JSON.parse(this.responseText);
+                console.log(typeof data);
+                console.log(data.followers);
+                document.querySelector("h4").innerHTML = `${data.name}, Followers: ${data.followers}`
+                document.querySelector("p").innerHTML = `${data.bio}`
+                document.getElementById("myImg").setAttribute("src" , `${data.avatar_url}`);
+            }
+            
+        }
+    
+        xhr.send();
+    
+    }
+
+    </script>
+</body>
+</html>

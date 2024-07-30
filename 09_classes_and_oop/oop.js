@@ -1,15 +1,29 @@
-const one = function user (username , count, isLoggedIn) {
-    this.username  = username
-    this.count = count
-    this.isLoggedIn = isLoggedIn
+// const user = {
+//     username: "Aman",
+//     loginCount : 9,
+//     signedIn: true,
+//     getUserDetails: function(){
+//         return this.username
+//     }
 
+// }
+
+// console.log(user.username);
+// console.log(user.getUserDetails());
+function user (username,loginCount,isLoggedIn){
+    this.username = username
+    this.loginCount = loginCount
+    this.isLoggedIn = isLoggedIn
     this.greeting = function(){
         console.log(`Hello ${this.username}`);
     }
-    // return this
+
+    return this
 }
 
-const user1 = new one("aman", 99, true)
-const user2 = new one("chaman", 8, false)
-console.log(user1 instanceof one);
-console.log(user2.constructor);
+const userOne = new user("Aman sharma", 13, false)
+// const userTwo = new user("chaman", 3, 1)
+
+console.log(userOne.constructor);
+console.log(userOne instanceof user);
+// console.log(userTwo);

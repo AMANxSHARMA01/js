@@ -22,8 +22,8 @@ function user (username,loginCount,isLoggedIn){
 }
 
 const userOne = new user("Aman sharma", 13, false)
-// const userTwo = new user("chaman", 3, 1)
+const userTwo = new user("chaman", 3, 1)
 
-console.log(userOne.constructor);
+console.log(userOne.constructor);  // its reference
 console.log(userOne instanceof user);
-// console.log(userTwo);
+console.log(userTwo);
